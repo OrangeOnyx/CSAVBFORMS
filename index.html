@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Volleyball Tournament - May 17th Brackets</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff6b6b;
+            --secondary: #4ecdc4;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+        }
+        body {
+            background-color: var(--light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 1rem 1.5rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .logo-img img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        .header-center {
+            flex: 1;
+            min-width: 200px;
+        }
+        .header-center h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .volleyball-svg {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 0.5rem auto;
+            display: block;
+        }
+        .logo-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .venue-info {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #ffc107;
+        }
+        .division-section {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .division-title {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #4ecdc4;
+        }
+        .game-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .game-info {
+            margin-bottom: 1rem;
+        }
+        .roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .role-slot {
+            background: white;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .thank-you {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .header-center h1 {
+                font-size: 1.3rem;
+            }
+            .roles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-stack">
+            <div class="logo-img">
+                <img src="csa-logo-2.png" alt="CSA Logo">
+            </div>
+            <div style="font-size:0.8rem;color:#222;background:#fff;border-radius:8px;padding:2px 8px;">CSA</div>
+        </div>
+        <div class="header-center">
+            <h1>🏐 Youth Volleyball Tournament</h1>
+            <p>May 17th, 2025 - Bracket Games</p>
+            <svg class="volleyball-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#fff" stroke="#ff6b6b" stroke-width="4"/>
+                <path d="M10,50 Q50,10 90,50" stroke="#4ecdc4" stroke-width="4" fill="none"/>
+                <path d="M50,10 Q90,50 50,90" stroke="#ff6b6b" stroke-width="4" fill="none"/>
+                <path d="M10,50 Q50,90 90,50" stroke="#2c3e50" stroke-width="4" fill="none"/>
+                <path d="M50,10 Q10,50 50,90" stroke="#4ecdc4" stroke-width="4" fill="none"/>
+            </svg>
+        </div>
+        <div class="logo-stack">
+            <div class="logo-img">
+                <img src="cajun-vb-logo.png" alt="Cajuns Volleyball Logo">
+            </div>
+            <div style="font-size:0.8rem;color:#222;background:#fff;border-radius:8px;padding:2px 8px;">Ragin' Cajuns</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="venue-info">
+            <h3><i class="fas fa-map-marker-alt"></i> Venue</h3>
+            <p>Comeaux Rec Center - EK Long Gym</p>
+        </div>
+        <div class="division-section">
+            <h2 class="division-title">Division 1 Brackets</h2>
+
+            <!-- Game 1 -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>9:00 AM - Court 1</h3>
+                    <p>Sugar n' Spike vs Dazzling Dolphins</p>
+                </div>
+                <div class="roles">
+                    <!-- Head Referee -->
+                    <div class="role-slot">
+                        <p>Head Referee</p>
+                        <form name="signup-game1-head-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Sugar n' Spike vs Dazzling Dolphins, 9:00 AM - Court 1">
+                            <input type="hidden" name="role" value="Head Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Assistant Referee -->
+                    <div class="role-slot">
+                        <p>Assistant Referee</p>
+                        <form name="signup-game1-assistant-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Sugar n' Spike vs Dazzling Dolphins, 9:00 AM - Court 1">
+                            <input type="hidden" name="role" value="Assistant Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Scorekeeper -->
+                    <div class="role-slot">
+                        <p>Scorekeeper</p>
+                        <form name="signup-game1-scorekeeper" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Sugar n' Spike vs Dazzling Dolphins, 9:00 AM - Court 1">
+                            <input type="hidden" name="role" value="Scorekeeper">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 1 -->
+                    <div class="role-slot">
+                        <p>Line Judge 1</p>
+                        <form name="signup-game1-line-judge-1" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Sugar n' Spike vs Dazzling Dolphins, 9:00 AM - Court 1">
+                            <input type="hidden" name="role" value="Line Judge 1">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 2 -->
+                    <div class="role-slot">
+                        <p>Line Judge 2</p>
+                        <form name="signup-game1-line-judge-2" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Sugar n' Spike vs Dazzling Dolphins, 9:00 AM - Court 1">
+                            <input type="hidden" name="role" value="Line Judge 2">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>9:00 AM - Court 2</h3>
+                    <p>Volley Pop Kids vs Silver Spikers</p>
+                </div>
+                <div class="roles">
+                    <!-- Head Referee -->
+                    <div class="role-slot">
+                        <p>Head Referee</p>
+                        <form name="signup-game2-head-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Volley Pop Kids vs Silver Spikers, 9:00 AM - Court 2">
+                            <input type="hidden" name="role" value="Head Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Assistant Referee -->
+                    <div class="role-slot">
+                        <p>Assistant Referee</p>
+                        <form name="signup-game2-assistant-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Volley Pop Kids vs Silver Spikers, 9:00 AM - Court 2">
+                            <input type="hidden" name="role" value="Assistant Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Scorekeeper -->
+                    <div class="role-slot">
+                        <p>Scorekeeper</p>
+                        <form name="signup-game2-scorekeeper" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Volley Pop Kids vs Silver Spikers, 9:00 AM - Court 2">
+                            <input type="hidden" name="role" value="Scorekeeper">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 1 -->
+                    <div class="role-slot">
+                        <p>Line Judge 1</p>
+                        <form name="signup-game2-line-judge-1" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Volley Pop Kids vs Silver Spikers, 9:00 AM - Court 2">
+                            <input type="hidden" name="role" value="Line Judge 1">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 2 -->
+                    <div class="role-slot">
+                        <p>Line Judge 2</p>
+                        <form name="signup-game2-line-judge-2" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Volley Pop Kids vs Silver Spikers, 9:00 AM - Court 2">
+                            <input type="hidden" name="role" value="Line Judge 2">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="division-section">
+            <h2 class="division-title">Division 2 Brackets</h2>
+
+            <!-- Game 3 -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>11:15 AM - Court 1</h3>
+                    <p>Perfect Peaches vs Ace Queens</p>
+                </div>
+                <div class="roles">
+                    <!-- Head Referee -->
+                    <div class="role-slot">
+                        <p>Head Referee</p>
+                        <form name="signup-game3-head-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Perfect Peaches vs Ace Queens, 11:15 AM - Court 1">
+                            <input type="hidden" name="role" value="Head Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Assistant Referee -->
+                    <div class="role-slot">
+                        <p>Assistant Referee</p>
+                        <form name="signup-game3-assistant-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Perfect Peaches vs Ace Queens, 11:15 AM - Court 1">
+                            <input type="hidden" name="role" value="Assistant Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Scorekeeper -->
+                    <div class="role-slot">
+                        <p>Scorekeeper</p>
+                        <form name="signup-game3-scorekeeper" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Perfect Peaches vs Ace Queens, 11:15 AM - Court 1">
+                            <input type="hidden" name="role" value="Scorekeeper">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 1 -->
+                    <div class="role-slot">
+                        <p>Line Judge 1</p>
+                        <form name="signup-game3-line-judge-1" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Perfect Peaches vs Ace Queens, 11:15 AM - Court 1">
+                            <input type="hidden" name="role" value="Line Judge 1">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 2 -->
+                    <div class="role-slot">
+                        <p>Line Judge 2</p>
+                        <form name="signup-game3-line-judge-2" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Perfect Peaches vs Ace Queens, 11:15 AM - Court 1">
+                            <input type="hidden" name="role" value="Line Judge 2">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game 4 -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>11:15 AM - Court 2</h3>
+                    <p>Spicy Spikers vs Sunshine Spikers</p>
+                </div>
+                <div class="roles">
+                    <!-- Head Referee -->
+                    <div class="role-slot">
+                        <p>Head Referee</p>
+                        <form name="signup-game4-head-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Spicy Spikers vs Sunshine Spikers, 11:15 AM - Court 2">
+                            <input type="hidden" name="role" value="Head Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Assistant Referee -->
+                    <div class="role-slot">
+                        <p>Assistant Referee</p>
+                        <form name="signup-game4-assistant-referee" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Spicy Spikers vs Sunshine Spikers, 11:15 AM - Court 2">
+                            <input type="hidden" name="role" value="Assistant Referee">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Scorekeeper -->
+                    <div class="role-slot">
+                        <p>Scorekeeper</p>
+                        <form name="signup-game4-scorekeeper" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Spicy Spikers vs Sunshine Spikers, 11:15 AM - Court 2">
+                            <input type="hidden" name="role" value="Scorekeeper">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 1 -->
+                    <div class="role-slot">
+                        <p>Line Judge 1</p>
+                        <form name="signup-game4-line-judge-1" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Spicy Spikers vs Sunshine Spikers, 11:15 AM - Court 2">
+                            <input type="hidden" name="role" value="Line Judge 1">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <!-- Line Judge 2 -->
+                    <div class="role-slot">
+                        <p>Line Judge 2</p>
+                        <form name="signup-game4-line-judge-2" method="POST" data-netlify="true" style="margin-bottom:0;">
+                            <input type="hidden" name="game" value="Spicy Spikers vs Sunshine Spikers, 11:15 AM - Court 2">
+                            <input type="hidden" name="role" value="Line Judge 2">
+                            <label style="display:block;font-size:0.95em;">Your Name: <input type="text" name="name" required style="width:70%;margin:0.2em 0;"></label>
+                            <button type="submit" style="background:#4ecdc4;color:#fff;border:none;padding:0.3em 1em;border-radius:4px;">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
